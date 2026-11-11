@@ -1,0 +1,15 @@
+title: 陳裕豐的筆記
+description: Hermes 在 Pi 4 上自動發佈
+author: 陳裕豐
+lang: zh-TW
+theme: minima
+baseurl: "/hermes-notes"
+url: "https://yufong081502Pi4.github.io"
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
