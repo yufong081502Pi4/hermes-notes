@@ -33,14 +33,15 @@ footer{margin-top:40px;color:#a8a29a;font-size:14px}
 .toc li{margin:0 0 12px;font-size:24px;line-height:1.5;break-inside:avoid}
 .toc a{color:#241f18;text-decoration:none;font-weight:600}
 .toc a:hover{color:#b45309;text-decoration:underline}
-#fab{position:fixed;left:22px;bottom:22px;z-index:99;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-#fabTop,#fabMenu{width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;font-size:24px;background:#b45309;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.24);display:flex;align-items:center;justify-content:center;line-height:1}
+#fab{position:fixed;right:20px;bottom:20px;z-index:99;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+#fabTop,#fabMenu{width:52px;height:52px;opacity:.88;border-radius:50%;border:0;cursor:pointer;font-size:24px;background:#b45309;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.24);display:flex;align-items:center;justify-content:center;line-height:1}
 #fabMenu{background:#3d3830}
-#fabPanel{display:none;position:fixed;left:22px;bottom:156px;z-index:98;width:min(380px,88vw);max-height:64vh;overflow-y:auto;background:#fff;border:1px solid #e6e2da;border-radius:14px;box-shadow:0 10px 38px rgba(0,0,0,.2);padding:16px 10px}
+#fabPanel{display:none;position:fixed;right:20px;top:96px;z-index:98;width:min(380px,88vw);max-height:62vh;overflow-y:auto;background:#fff;border:1px solid #e6e2da;border-radius:14px;box-shadow:0 10px 38px rgba(0,0,0,.2);padding:16px 10px}
 #fabPanel.open{display:block}
 #fabPanel a{display:block;padding:12px 14px;color:#1a1a1a;text-decoration:none;font-size:21px;border-radius:8px;line-height:1.45}
 #fabPanel a:hover{background:#f4f1ea;color:#b45309}
 .tabbar{position:sticky;top:0;z-index:60;display:flex;gap:10px;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);padding:12px 0 14px;margin:0 0 30px;border-bottom:1px solid #e6e2da}
+.tabbar button.tabmenu{flex:0 0 auto;width:58px;padding:15px 0;font-size:22px}
 .tabbar button{flex:1;padding:15px 18px;font-size:22px;font-weight:700;border-radius:12px;border:1px solid #ded9d0;background:#fff;color:#5c574f;cursor:pointer;transition:.15s}
 .tabbar button.active{background:#b45309;border-color:#b45309;color:#fff}
 .pane{display:none}
@@ -70,7 +71,7 @@ footer{color:#6b665b}
 </head><body><div class="wrap">
 <h1>2026-11-12 投資日報（盤中補發）</h1>
 <div class="date">2026-11-12 12:50</div>
-<div class="tabbar"><button data-i="0" class="active">股市</button><button data-i="1" class="">關於我</button></div>
+<div class="tabbar"><button data-i="0" class="active">股市</button><button data-i="1" class="">關於我</button><button id="fabMenu" class="tabmenu" aria-label="目錄">☰</button></div>
 <section class="pane active" id="pane0"><nav class="toc"><h2>目錄</h2><ol><li><a href="#sec1">🚨 Emmy 重點提醒（持續中）</a></li><li><a href="#sec2">★ 紀律提醒（先看這個）</a></li><li><a href="#sec3">⓿ 先回答三個問題：消息面 vs 已發生</a></li><li><a href="#sec4">① 一句話結論</a></li><li><a href="#sec5">② 國際與美股（11/11 收盤）</a></li><li><a href="#sec6">③ 台股覆盤（12:45 盤中）</a></li><li><a href="#sec7">④ 頻道影片重點</a></li><li><a href="#sec8">⑤ 我的持股動態</a></li><li><a href="#sec9">⑥ 觀察名單（不是我持股）</a></li><li><a href="#sec10">⑦ SWOT</a></li><li><a href="#sec11">⑧ 財經行事曆</a></li><li><a href="#sec12">⑩ 資料來源</a></li></ol></nav><blockquote>
 <p>⚠️ 本份為 <span style="background:#d32f2f;color:#fff;padding:2px 6px;border-radius:3px">12:45 盤中快照</span>，台股 13:30 收盤，數字會再變動。07:00 排程今日未產出，本份為補發。</p>
 </blockquote>
@@ -591,32 +592,32 @@ CoreWeave 是</strong>崩盤之後**（11/10）才公布財報，而且財報是
 <p>產生時間：2026-11-12 12:50（台北）｜盤中補發</p>
 </blockquote>
 <div class="nav"><a href="index.html">← 回日報列表</a></div></section><section class="pane" id="pane1"><nav class="toc"><h2>目錄</h2><ol><li><a href="#sec1">比價商品</a></li><li><a href="#sec2">其他待辦</a></li></ol></nav><blockquote>
-<p>這一頁放的是跟股市無關、但你需要每天看一眼的東西。更新時間：<strong>2026-11-12 17:43</strong></p>
+<p>這一頁放的是跟股市無關、但你需要每天看一眼的東西。更新時間：<strong>2026-11-12 17:45</strong></p>
 </blockquote>
 <h2 id="sec1">比價商品</h2>
 <p><strong>Even Realities Even G2 AI 智慧眼鏡</strong>（目標價 NT$12,000）</p>
 <p><span style="background:#2e7d32;color:#fff;padding:2px 6px;border-radius:3px">未達標</span>　目前最低 NT$15,000，距目標還差 NT$3,000</p>
 <p><strong>NT$15,000</strong>　<a href="https://www.ruten.com.tw/item/22642906113433">露天・二手 ↗</a></p>
 <p>Even Realities G2 智慧眼鏡附保護盒 9成新 8月購買 平光</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$16,000</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">蝦皮・二手 ↗</a></p>
 <p>Even G2智慧眼鏡 二手</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$17,820</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">樂天・全新 ↗</a></p>
 <p>Even Realities AI眼鏡套裝G2 B方框 全新未拆封 商品未拆未使用可以7天內申請退貨,如…</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$17,820</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">樂天・全新 ↗</a></p>
 <p>Even Realities AI眼鏡套裝G2 A圓框 全新未拆封 商品未拆未使用可以7天內申請退貨,如…</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$18,000</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">蝦皮・全新 ↗</a></p>
 <p>HS⚑ Even Realities G2 智能眼鏡 AI眼鏡 AR眼鏡 即時翻譯 提詞顯示</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$18,000</strong>　<a href="https://biggo.com.tw/s/Even%20G2">BigGo・全新 ↗</a></p>
 <p>Even Realities AI眼鏡套裝G2 A圓框 全新未拆封 商品未拆未使用可以7天內申請退貨,如…</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$18,000</strong>　<a href="https://biggo.com.tw/s/Even%20G2">BigGo・全新 ↗</a></p>
 <p>Even Realities AI眼鏡套裝G2 B方框 全新未拆封 商品未拆未使用可以7天內申請退貨,如…</p>
-<div style="border-top:1px solid #eee9e1;margin:16px 0 18px"></div>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
 <p><strong>NT$18,500</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">旋轉拍賣・全新 ↗</a></p>
 <p>even G2 智能眼鏡</p>
 <blockquote>
@@ -635,11 +636,11 @@ CoreWeave 是</strong>崩盤之後**（11/10）才公布財報，而且財報是
 <li><strong>3.5mm 喇叭／音源線實測</strong></li>
 </ul>
 <blockquote>
-<p>產生時間：2026-11-12 17:43（台北）</p>
+<p>產生時間：2026-11-12 17:45（台北）</p>
 </blockquote>
 <div class="nav"><a href="index.html">← 回日報列表</a></div></section>
 <footer>由 Hermes Agent 自動產生</footer>
-</div><div id="fab"><button id="fabMenu" aria-label="目錄">☰</button><button id="fabTop" aria-label="回頂端">↑</button></div><div id="fabPanel"></div><script>
+</div><div id="fab"><button id="fabTop" aria-label="回頂端">↑</button></div><div id="fabPanel"></div><script>
 var TOCS = [[{"id": "sec1", "t": "🚨 Emmy 重點提醒（持續中）"}, {"id": "sec2", "t": "★ 紀律提醒（先看這個）"}, {"id": "sec3", "t": "⓿ 先回答三個問題：消息面 vs 已發生"}, {"id": "sec4", "t": "① 一句話結論"}, {"id": "sec5", "t": "② 國際與美股（11/11 收盤）"}, {"id": "sec6", "t": "③ 台股覆盤（12:45 盤中）"}, {"id": "sec7", "t": "④ 頻道影片重點"}, {"id": "sec8", "t": "⑤ 我的持股動態"}, {"id": "sec9", "t": "⑥ 觀察名單（不是我持股）"}, {"id": "sec10", "t": "⑦ SWOT"}, {"id": "sec11", "t": "⑧ 財經行事曆"}, {"id": "sec12", "t": "⑩ 資料來源"}], [{"id": "sec1", "t": "比價商品"}, {"id": "sec2", "t": "其他待辦"}]];
 var active = 0;
 function renderPanel(){
@@ -647,10 +648,10 @@ function renderPanel(){
   el.innerHTML = TOCS[active].map(function(x){return '<a href="#'+x.id+'">'+x.t+'</a>';}).join('');
   el.classList.remove('open');
 }
-document.querySelectorAll('.tabbar button').forEach(function(b){
+document.querySelectorAll('.tabbar button[data-i]').forEach(function(b){
   b.addEventListener('click', function(){
     active = parseInt(b.dataset.i,10);
-    document.querySelectorAll('.tabbar button').forEach(function(x){x.classList.toggle('active', x===b);});
+    document.querySelectorAll('.tabbar button[data-i]').forEach(function(x){x.classList.toggle('active', x===b);});
     document.querySelectorAll('.pane').forEach(function(x,i){x.classList.toggle('active', i===active);});
     renderPanel();
     window.scrollTo({top:0,behavior:'instant'});
