@@ -2,23 +2,108 @@
 <html lang="zh-Hant"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="refresh" content="0;url=reports/2026-11-13-投資日報.html">
-<title>最新晨報</title>
-<style>
-body{margin:0;padding:44px 24px;background:#fbfaf7;color:#1a1a1a;font-family:-apple-system,"PingFang TC","Noto Sans TC",system-ui,sans-serif;text-align:center}
-h1{font-size:26px;margin:0 0 8px}
-p.sub{color:#8a857c;font-size:15px;margin:0 0 32px}
-a{display:block;max-width:560px;margin:0 auto 16px;padding:24px 20px;border-radius:16px;background:#b45309;color:#fff;text-decoration:none;font-size:24px;font-weight:700}
-a.alt{background:#fff;color:#5c574f;border:1px solid #ded9d0}
+<title>小賀的投資筆記</title>
+<style>*{box-sizing:border-box}
+body{margin:0;background:#fbfaf7;color:#1a1a1a;font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;font-size:20px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:60px 28px 110px}
+h1{font-size:clamp(21px,6.2vw,34px);line-height:1.35;margin:0 0 12px;letter-spacing:.01em;white-space:nowrap}
+.date{color:#8a857c;font-size:17px;margin-bottom:38px;padding-bottom:22px;border-bottom:1px solid #e6e2da;font-variant-numeric:tabular-nums}
+h2{font-size:27px;margin:46px 0 18px;padding-left:14px;border-left:4px solid #b45309;scroll-margin-top:24px}
+h3{font-size:22px;margin:32px 0 12px;color:#3d3830}
+p{margin:0 0 20px}
+ul,ol{padding-left:28px;margin:0 0 20px}
+li{margin-bottom:10px}
+blockquote{margin:0 0 22px;padding:16px 22px;background:#f4f1ea;border-left:4px solid #d6cdbb;color:#57524a;font-size:19px;border-radius:0 8px 8px 0}
+code{background:#f1ede5;padding:3px 7px;border-radius:5px;font-size:17px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:#f1ede5;padding:16px 18px;border-radius:10px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;padding:0;font-size:17px}
+table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:18px;line-height:1.6;table-layout:fixed;word-break:break-word}
+th,td{border:1px solid #ded9d0;padding:12px 10px;text-align:left;vertical-align:top}
+th{background:#f4f1ea;font-weight:700;font-size:17px;white-space:normal}
+tbody tr:nth-child(even){background:#faf8f4}
+img{max-width:100%;height:auto;display:block;margin:8px 0 24px;border:1px solid #e6e2da;border-radius:10px}
+@media(prefers-color-scheme:dark){img{border-color:#2e2b24}}
+a{color:#b45309;text-decoration:none}
+a:hover{text-decoration:underline}
+strong{font-weight:700}
+hr{border:0;border-top:1px solid #e6e2da;margin:36px 0}
+.nav{margin-top:60px;padding-top:24px;border-top:1px solid #e6e2da;font-size:19px}
+footer{margin-top:40px;color:#a8a29a;font-size:14px}
+.toc{margin:0 0 46px;padding:24px 28px;background:#f4f1ea;border-radius:12px;border:1px solid #e6e2da}
+.toc h2{margin:0 0 16px;padding:0;border:0;font-size:19px;letter-spacing:.1em;color:#8a857c;font-weight:700}
+.toc ol{margin:0;padding-left:2px;list-style:none;columns:2;column-gap:32px}
+.toc li{margin:0 0 10px;font-size:20px;line-height:1.5;break-inside:avoid}
+.toc a{color:#241f18;text-decoration:none;font-weight:600}
+.toc a:hover{color:#b45309;text-decoration:underline}
+#fab{position:fixed;left:18px;bottom:22px;z-index:99;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+#fabTop,#fabMenu{width:52px;height:52px;opacity:.88;border-radius:50%;border:0;cursor:pointer;font-size:24px;background:#b45309;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.24);display:flex;align-items:center;justify-content:center;line-height:1}
+#fabMenu{background:#3d3830}
+#fabPanel{display:none;position:fixed;right:20px;top:96px;z-index:98;width:min(380px,88vw);max-height:62vh;overflow-y:auto;background:#fff;border:1px solid #e6e2da;border-radius:14px;box-shadow:0 10px 38px rgba(0,0,0,.2);padding:16px 10px}
+#fabPanel.open{display:block}
+#fabPanel a{display:block;padding:12px 14px;color:#1a1a1a;text-decoration:none;font-size:21px;border-radius:8px;line-height:1.45}
+#fabPanel a:hover{background:#f4f1ea;color:#b45309}
+.navbtns{display:flex;gap:14px;margin:0 0 26px;flex-wrap:wrap}
+.navbtns a{flex:1;min-width:150px;text-align:center;padding:18px 20px;font-size:22px;font-weight:700;border-radius:14px;text-decoration:none;background:#b45309;color:#fff;border:1px solid #b45309}
+.navbtns a.alt{background:#fff;color:#3d3830;border-color:#b9b2a5}
+.navbtns a:active{opacity:.85}
+@media(prefers-color-scheme:dark){.navbtns a.alt{background:#1f1d16;color:#c9c2b4;border-color:#2e2b24}}
+.tabbar{position:sticky;top:0;z-index:60;display:flex;gap:10px;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);padding:12px 0 14px;margin:0 0 30px;border-bottom:1px solid #e6e2da}
+.tabbar button.tabmenu{flex:0 0 auto;width:76px;padding:15px 0;font-size:19px;font-weight:700}
+.tabbar button,.tabbar a.tablink{flex:1;padding:15px 8px;font-size:21px;text-align:center;text-decoration:none;display:block;font-weight:700;border-radius:12px;border:1px solid #ded9d0;background:#fff;color:#5c574f;cursor:pointer;transition:.15s}
+.tabbar button.active{background:#b45309;border-color:#b45309;color:#fff}
+.tabbar a.tablink{background:#fff;color:#5c574f;border:1px solid #ded9d0;border-radius:12px;font-weight:700}
+h1 .stamp{font-size:clamp(13px,3.6vw,19px);font-weight:600;color:#8a857c;margin-left:10px;white-space:nowrap}
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.head h1{flex:0 1 auto;margin-bottom:8px}
+.freelight{white-space:nowrap;font-size:15px;font-weight:700;color:#6b655c;display:flex;align-items:center;gap:8px;flex:0 0 auto;margin-left:auto}
+.freelight .led{width:15px;height:15px;border-radius:50%;display:inline-block}
+.freelight .led.on{background:#d32f2f;box-shadow:0 0 7px rgba(211,47,47,.7)}
+.freelight .led.off{background:#2e9e4f;box-shadow:0 0 7px rgba(46,158,79,.6)}
+.pricehead{background:#c62828;color:#ffeb3b;font-size:30px;font-weight:800;padding:14px 18px;border-radius:10px;margin:38px 0 16px;line-height:1.35}
+.pane{display:none}
+.pane.active{display:block}
+@media(max-width:700px){.toc ol{columns:1}.toc li{font-size:19px}.tabbar button,.tabbar a.tablink{font-size:16px;padding:12px 4px}.tabbar button.tabmenu{width:52px}}
 @media(prefers-color-scheme:dark){
 body{background:#16150f;color:#e8e4dc}
-a.alt{background:#1f1d16;color:#c9c2b4;border-color:#2e2b24}
+.date{border-color:#2e2b24;color:#8b8578}
+h2{border-color:#f0a25a}h3{color:#c9c2b4}
+blockquote{background:#1f1d16;border-color:#3a3529;color:#b8b1a2}
+code,pre{background:#26231c;color:#e8e4dc}
+th{background:#26231c;border-color:#2e2b24}
+td{border-color:#2e2b24}
+tbody tr:nth-child(even){background:#1b1a14}
+a{color:#f0a25a}
+hr,.nav{border-color:#2e2b24}
+footer{color:#6b665b}
+.toc{background:#1f1d16;border-color:#2e2b24}
+.toc h2{color:#8b8578}
+.toc a{color:#efeae0}
+#fabPanel{background:#1f1d16;border-color:#2e2b24}
+#fabPanel a{color:#e8e4dc}
+#fabPanel a:hover{background:#26231c;color:#f0a25a}
+.tabbar{background:rgba(22,21,15,.96);border-color:#2e2b24}
+.tabbar button{background:#1f1d16;border-color:#2e2b24;color:#c9c2b4}
 }
-</style></head>
-<body>
-<h1>最新晨報</h1>
-<p class="sub">2026-11-13 07:00</p>
-<a href="reports/2026-11-13-投資日報.html">開啟最新晨報</a>
-<a class="alt" href="reports/index.html">過去日報</a>
-<p class="sub" style="margin-top:28px">沒有自動跳轉就點上面的大按鈕</p>
-</body></html>
+.big{display:block;max-width:680px;margin:0 auto 18px;padding:26px 20px;border-radius:16px;background:#b45309;color:#fff;text-decoration:none;font-size:26px;font-weight:800;text-align:center}
+.big.alt{background:#fff;color:#3d3830;border:2px solid #b9b2a5}
+.big small{display:block;font-size:15px;font-weight:600;opacity:.9;margin-top:6px}
+section.about{margin-top:56px;padding-top:26px;border-top:3px solid #b45309}
+.about-card{display:block;padding:22px;border-radius:14px;background:#f4f1ea;border:1px solid #e6e2da;text-decoration:none;color:#1a1a1a;font-size:21px;font-weight:700}
+.about-card small{display:block;font-weight:500;font-size:15px;color:#7a7469;margin-top:8px}
+</style>
+</head><body><div class="wrap">
+
+<h1>小賀的投資筆記</h1>
+<div class="date">固定網址，不會自動跳轉</div>
+
+<a class="big" href="reports/2026-11-14-投資日報.html">最新晨報<small>2026-11-14</small></a>
+<a class="big alt" href="reports/index.html">舊文<small>過去所有晨報</small></a>
+<a class="big alt" href="reports/2026-11-13-投資日報.html">前一份晨報<small>2026-11-13-投資日報</small></a>
+
+<section class="about" id="about">
+<h1 style="font-size:30px">關於我</h1>
+<a class="about-card" href="about.html">比價商品與生活筆記 → 點我看關於我頁面
+<small>比價商品：Even G2 眼鏡、G2＋R1 戒指；每日更新最低價</small></a>
+</section>
+
+</div></body></html>
