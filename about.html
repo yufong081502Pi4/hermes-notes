@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>關於我</title>
+<style>*{box-sizing:border-box}
+body{margin:0;background:#fbfaf7;color:#1a1a1a;font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;font-size:20px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:60px 28px 110px}
+h1{font-size:clamp(21px,6.2vw,34px);line-height:1.35;margin:0 0 12px;letter-spacing:.01em;white-space:nowrap}
+.date{color:#8a857c;font-size:17px;margin-bottom:38px;padding-bottom:22px;border-bottom:1px solid #e6e2da;font-variant-numeric:tabular-nums}
+h2{font-size:27px;margin:46px 0 18px;padding-left:14px;border-left:4px solid #b45309;scroll-margin-top:24px}
+h3{font-size:22px;margin:32px 0 12px;color:#3d3830}
+p{margin:0 0 20px}
+ul,ol{padding-left:28px;margin:0 0 20px}
+li{margin-bottom:10px}
+blockquote{margin:0 0 22px;padding:16px 22px;background:#f4f1ea;border-left:4px solid #d6cdbb;color:#57524a;font-size:19px;border-radius:0 8px 8px 0}
+code{background:#f1ede5;padding:3px 7px;border-radius:5px;font-size:17px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:#f1ede5;padding:16px 18px;border-radius:10px;overflow-x:auto;margin:0 0 20px}
+pre code{background:none;padding:0;font-size:17px}
+table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:18px;line-height:1.6;table-layout:fixed;word-break:break-word}
+th,td{border:1px solid #ded9d0;padding:12px 10px;text-align:left;vertical-align:top}
+th{background:#f4f1ea;font-weight:700;font-size:17px;white-space:normal}
+tbody tr:nth-child(even){background:#faf8f4}
+img{max-width:100%;height:auto;display:block;margin:8px 0 24px;border:1px solid #e6e2da;border-radius:10px}
+@media(prefers-color-scheme:dark){img{border-color:#2e2b24}}
+a{color:#b45309;text-decoration:none}
+a:hover{text-decoration:underline}
+strong{font-weight:700}
+hr{border:0;border-top:1px solid #e6e2da;margin:36px 0}
+.nav{margin-top:60px;padding-top:24px;border-top:1px solid #e6e2da;font-size:19px}
+footer{margin-top:40px;color:#a8a29a;font-size:14px}
+.toc{margin:0 0 46px;padding:24px 28px;background:#f4f1ea;border-radius:12px;border:1px solid #e6e2da}
+.toc h2{margin:0 0 16px;padding:0;border:0;font-size:19px;letter-spacing:.1em;color:#8a857c;font-weight:700}
+.toc ol{margin:0;padding-left:2px;list-style:none;columns:2;column-gap:32px}
+.toc li{margin:0 0 10px;font-size:20px;line-height:1.5;break-inside:avoid}
+.toc a{color:#241f18;text-decoration:none;font-weight:600}
+.toc a:hover{color:#b45309;text-decoration:underline}
+#fab{position:fixed;left:18px;bottom:22px;z-index:99;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+#fabTop,#fabMenu{width:52px;height:52px;opacity:.88;border-radius:50%;border:0;cursor:pointer;font-size:24px;background:#b45309;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.24);display:flex;align-items:center;justify-content:center;line-height:1}
+#fabMenu{background:#3d3830}
+#fabPanel{display:none;position:fixed;right:20px;top:96px;z-index:98;width:min(380px,88vw);max-height:62vh;overflow-y:auto;background:#fff;border:1px solid #e6e2da;border-radius:14px;box-shadow:0 10px 38px rgba(0,0,0,.2);padding:16px 10px}
+#fabPanel.open{display:block}
+#fabPanel a{display:block;padding:12px 14px;color:#1a1a1a;text-decoration:none;font-size:21px;border-radius:8px;line-height:1.45}
+#fabPanel a:hover{background:#f4f1ea;color:#b45309}
+.navbtns{display:flex;gap:14px;margin:0 0 26px;flex-wrap:wrap}
+.navbtns a{flex:1;min-width:150px;text-align:center;padding:18px 20px;font-size:22px;font-weight:700;border-radius:14px;text-decoration:none;background:#b45309;color:#fff;border:1px solid #b45309}
+.navbtns a.alt{background:#fff;color:#3d3830;border-color:#b9b2a5}
+.navbtns a:active{opacity:.85}
+@media(prefers-color-scheme:dark){.navbtns a.alt{background:#1f1d16;color:#c9c2b4;border-color:#2e2b24}}
+.tabbar{position:sticky;top:0;z-index:60;display:flex;gap:10px;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);padding:12px 0 14px;margin:0 0 30px;border-bottom:1px solid #e6e2da}
+.tabbar button.tabmenu{flex:0 0 auto;width:76px;padding:15px 0;font-size:19px;font-weight:700}
+.tabbar button,.tabbar a.tablink{flex:1;padding:15px 8px;font-size:21px;text-align:center;text-decoration:none;display:block;font-weight:700;border-radius:12px;border:1px solid #ded9d0;background:#fff;color:#5c574f;cursor:pointer;transition:.15s}
+.tabbar button.active{background:#b45309;border-color:#b45309;color:#fff}
+.tabbar a.tablink{background:#fff;color:#5c574f;border:1px solid #ded9d0;border-radius:12px;font-weight:700}
+h1 .stamp{font-size:clamp(13px,3.6vw,19px);font-weight:600;color:#8a857c;margin-left:10px;white-space:nowrap}
+.pricehead{background:#c62828;color:#ffeb3b;font-size:30px;font-weight:800;padding:14px 18px;border-radius:10px;margin:38px 0 16px;line-height:1.35}
+.pane{display:none}
+.pane.active{display:block}
+@media(max-width:700px){.toc ol{columns:1}.toc li{font-size:19px}.tabbar button,.tabbar a.tablink{font-size:16px;padding:12px 4px}.tabbar button.tabmenu{width:52px}}
+@media(prefers-color-scheme:dark){
+body{background:#16150f;color:#e8e4dc}
+.date{border-color:#2e2b24;color:#8b8578}
+h2{border-color:#f0a25a}h3{color:#c9c2b4}
+blockquote{background:#1f1d16;border-color:#3a3529;color:#b8b1a2}
+code,pre{background:#26231c;color:#e8e4dc}
+th{background:#26231c;border-color:#2e2b24}
+td{border-color:#2e2b24}
+tbody tr:nth-child(even){background:#1b1a14}
+a{color:#f0a25a}
+hr,.nav{border-color:#2e2b24}
+footer{color:#6b665b}
+.toc{background:#1f1d16;border-color:#2e2b24}
+.toc h2{color:#8b8578}
+.toc a{color:#efeae0}
+#fabPanel{background:#1f1d16;border-color:#2e2b24}
+#fabPanel a{color:#e8e4dc}
+#fabPanel a:hover{background:#26231c;color:#f0a25a}
+.tabbar{background:rgba(22,21,15,.96);border-color:#2e2b24}
+.tabbar button{background:#1f1d16;border-color:#2e2b24;color:#c9c2b4}
+}
+.big{display:block;max-width:640px;margin:0 auto 18px;padding:26px 20px;border-radius:16px;background:#b45309;color:#fff;text-decoration:none;font-size:26px;font-weight:800;text-align:center}
+.big.alt{background:#fff;color:#3d3830;border:2px solid #b9b2a5}
+.big small{display:block;font-size:16px;font-weight:600;opacity:.9;margin-top:6px}
+section.about{margin-top:56px;padding-top:28px;border-top:3px solid #b45309}
+</style>
+</head><body><div class="wrap">
+<h1>關於我</h1><blockquote>
+<p>這一頁放的是跟股市無關、但你需要每天看一眼的東西。更新時間：<strong>2026-11-14 07:04</strong></p>
+</blockquote>
+<h2>比價商品</h2>
+<h3 class="pricehead">Even Realities Even G2 AI 智慧眼鏡（目標價 NT$12,000）</h3>
+<p><span style="background:#2e7d32;color:#fff;padding:2px 6px;border-radius:3px">未達標</span>　目前最低 NT$15,000，距目標還差 NT$3,000</p>
+<p><strong>NT$15,000</strong>　<a href="https://www.ruten.com.tw/item/22642906113433">露天 ↗</a></p>
+<p>Even Realities G2 智慧眼鏡附保護盒 9成新 8月購買 平光</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$16,000</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">蝦皮 ↗</a></p>
+<p>Even G2智慧眼鏡 二手</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$18,000</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">樂天 ↗</a></p>
+<p>Even Realities AI眼鏡套裝G2 B方框 全新未拆封 商品未拆未使用可以7天內申請退貨,如…</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$18,000</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">樂天 ↗</a></p>
+<p>Even Realities AI眼鏡套裝G2 A圓框 全新未拆封 商品未拆未使用可以7天內申請退貨,如…</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$18,000</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">蝦皮 ↗</a></p>
+<p>HS⚑ Even Realities G2 智能眼鏡 AI眼鏡 AR眼鏡 即時翻譯 提詞顯示</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$18,500</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">旋轉拍賣 ↗</a></p>
+<p>even G2 智能眼鏡</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$19,990</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">momo ↗</a></p>
+<p>【Even Realities】Even G2 AI 智慧眼鏡(智能眼鏡/語音助理/即時翻譯/會議提詞/…</p>
+<div style="border-top:1px solid #d9d2c5;margin:18px 0 20px"></div>
+<p><strong>NT$19,990</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">myfone ↗</a></p>
+<p>【OP科技生活】Even Realities AI眼鏡套裝G2 B方框(棕)</p>
+<blockquote>
+<p>公司貨（台灣代理 iNNOHOME）定價 NT$19,990。上表已排除中國代購起價與配件。
+比價時間：2026-11-13T08:00　｜　完整報價見 <code>00陳裕豐/比價/EvenG2智能眼鏡.md</code></p>
+</blockquote>
+<h3 class="pricehead">Even G2 ＋ R1 戒指（目標 NT$15,000）</h3>
+<p><span style="background:#2e7d32;color:#fff;padding:2px 6px;border-radius:3px">未達標</span>　最低組合 NT$22,990，距目標還差 NT$7,990</p>
+<blockquote>
+<p>市場沒有「G2＋R1」成套賣場，以下為「G2 ＋ 官方 R1（7,990）」的拆買估算。</p>
+</blockquote>
+<p><strong>NT$22,990</strong>　<a href="https://www.ruten.com.tw/item/22642906113433">露天・拆買・二手 ↗</a></p>
+<p>Even Realities G2 智慧眼鏡附保護盒 9成新 8月購買 平光… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$23,990</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">蝦皮・拆買・二手 ↗</a></p>
+<p>Even G2智慧眼鏡 二手… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$25,990</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">樂天・拆買・全新 ↗</a></p>
+<p>Even Realities AI眼鏡套裝G2 B方框 全新未拆封 商品未拆未使… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$25,990</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">樂天・拆買・全新 ↗</a></p>
+<p>Even Realities AI眼鏡套裝G2 A圓框 全新未拆封 商品未拆未使… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$25,990</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">蝦皮・拆買・全新 ↗</a></p>
+<p>HS⚑ Even Realities G2 智能眼鏡 AI眼鏡 AR眼鏡 即時翻… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$26,490</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">旋轉拍賣・拆買・全新 ↗</a></p>
+<p>even G2 智能眼鏡… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$27,980</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">momo・拆買・全新 ↗</a></p>
+<p>【Even Realities】Even G2 AI 智慧眼鏡(智能眼鏡/語音助… ＋ R1 智慧戒指</p>
+<div style="border-top:1px solid #d9d2c5;margin:16px 0 18px"></div>
+<p><strong>NT$27,980</strong>　<a href="https://feebee.com.tw/all/Even%20G2/">myfone・拆買・全新 ↗</a></p>
+<p>【OP科技生活】Even Realities AI眼鏡套裝G2 B方框(棕)… ＋ R1 智慧戒指</p>
+<h3>📣 社群賣家與官方促銷（FB／Mobile01）</h3>
+<p><strong>NT$15,000</strong>　<a href="https://facebook.com/groups/iamdonghu/posts/2825125891008027">FB 社團 ↗</a></p>
+<p>售 EVEN G2 智慧眼鏡｜全新未拆封｜公司貨／保固｜附購買證明（原價 19,990）</p>
+<p><span style="font-size:15px;color:#8a857c">（賣家在同一社團重複貼文，可信度較高；需私訊確認是否還在）</span></p>
+<p>價格未標（需私訊）　<a href="https://facebook.com/groups/207110076321670/posts/2895551294144188">FB 社團 ↗</a></p>
+<p>我要出售極新的 Even G2 智慧眼鏡｜本月購入｜新竹自取</p>
+<p><span style="font-size:15px;color:#8a857c">（貼文未標價，要私訊問；8 小時前發文，可能還在）</span></p>
+<p>價格未標（需私訊）　<a href="https://3c.ltn.com.tw/news/68166">Even Realities 雙11 ↗</a></p>
+<p>11.11 無痛大升級：11/1～12/13 指定組合現折 2,000～4,000 元</p>
+<p><span style="font-size:15px;color:#8a857c">（旗艦全配（G2＋R1＋夾片）折 4,000；G2＋R1 或 G2＋夾片折 2,000。單機不適用，要買組合才有。通路：全國電子、法雅客、誠品、台灣大哥大、momo、Yahoo、PChome、iINOHOME）</span></p>
+<p><span style="font-size:15px;color:#8a857c">查詢時間：2026-11-12 19:05｜FB 社團與 Mobile01 無法穩定自動抓取（FB 需登入、Mobile01 對外封鎖），此區由搜尋索引＋人工維護；Mobile01 目前只有討論串、沒有市集讓售。</span></p>
+<h2>其他待辦</h2>
+<ul>
+<li>追蹤 2330、2454、8299 的三大法人買賣超，每天記在交易日誌/</li>
+<li>（範例）台積電法說會重點</li>
+<li><strong>換成 5V/3A 原廠等級電源</strong></li>
+<li><strong>加停電保護（UPS 或行動電源供電）</strong></li>
+<li><strong>準備一張備用 SD 卡（同容量）</strong></li>
+<li><strong>散熱與溫度記錄</strong></li>
+<li><strong>確認有線網路優先</strong></li>
+<li><strong>3.5mm 喇叭／音源線實測</strong></li>
+</ul>
+<blockquote>
+<p>產生時間：2026-11-14 07:04（台北）</p>
+</blockquote>
+<p><a href="home.html">← 回首頁</a></p>
+</div></body></html>
